@@ -5,9 +5,14 @@
 
 html {
   box-sizing: border-box;
+  background-color: #999;
 }
 *, *:before, *:after {
   box-sizing: inherit;
+}
+body {
+  padding: 1em;
+  background-color: #fff;
 }
 p { font-size: 1em;}
 h1 { font-size: 2em;}
@@ -16,7 +21,11 @@ h3 { font-size: 1.4em;}
 h4 { font-size: 1.2em;}
 h5 { font-size: 1em;}
 h6 { font-size: .75em;}
-
+h1 {
+  margin: 0;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
 pre {
   padding: 1em;
   background-color: #FFFBE5;
@@ -37,11 +46,10 @@ dl {
   border: 2px solid #ccc;
   border-radius: 3px;
 }
-
-@media all and (min-width: 32em) {
+@media all and (min-width: 45em) {
   body {
-    max-width: 450px;
-    margin: 0 auto;
+    max-width: 690px;
+    margin: .5em auto;
   }
 }
 @media all and (min-width: 20em) {
