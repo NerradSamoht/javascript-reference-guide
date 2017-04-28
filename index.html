@@ -1,6 +1,10 @@
 
 <!DOCTYPE html>
+<<<<<<< HEAD
+<html lang="en">
+=======
 <html lang="en-GB">
+>>>>>>> 5fa6364732488f1634c5c8bd4c43f754b34c5e4d
 <head>
   <meta charset="utf-8">
   <title>Learning JavaScript</title>
@@ -14,7 +18,12 @@
   </header>
   <main>
 		<article>
+<<<<<<< HEAD
+			<h2>Data types</h2>
+      <div class="content">
+=======
 			<h3>Data types</h3>
+>>>>>>> 5fa6364732488f1634c5c8bd4c43f754b34c5e4d
       <p>JavaScript has seven data types:</p>
       <ol>
         <li><code>string</code></li>
@@ -25,10 +34,18 @@
         <li><code>undefined</code></li>
         <li><code>null</code></li>
       </ol>
+<<<<<<< HEAD
+		</div>
+    </article>
+
+		<article>
+			<h2>Variables</h2>
+=======
 		</article>
 
 		<article>
 			<h3>Variables</h3>
+>>>>>>> 5fa6364732488f1634c5c8bd4c43f754b34c5e4d
 			<div class="content">
 				<p>Declaring a variable <code>var myName;</code></p>
 				<p>If no value is assigned JavaScript assigns a value of <code>undefined</code>.</p>
@@ -39,6 +56,24 @@
 				<pre><code>myString = "A global variable."</code></pre>
 				<p>This however will create a global variable, which could lead to some unexpected results, so always best to use <code>var</code>.</p>
 			</div>
+<<<<<<< HEAD
+    </article>
+
+    <article>
+      <h2>Comments</h2>
+      <div class="content">
+      <p>// This is an in-line comment</p>
+      <p>/*<br>This is a <br>multi-line comment<br>*/</p>
+    </div>
+    </article>
+
+		<article>
+      <h2>Strings</h2>
+      <div class="content">
+      <article>
+        <h3>Concatenating strings</h3>
+      <div class="content">
+=======
 		</article>
 
     <article>
@@ -51,13 +86,22 @@
       <h3>Strings</h3>
       <article>
         <h4>Concatenating strings</h4>
+>>>>>>> 5fa6364732488f1634c5c8bd4c43f754b34c5e4d
         <p>To concatenate a string you can use the <code>+</code> operator.</p>
         <pre><code>var a = "Hello";<br>var b = "World";<br>var c = a + " " + b; // Hello World</code></pre>
         <p>To concatentate a string to the end of an existing string you can use the <code>+=</code> operator.</p>
         <pre><code>var a = "Hello"<br>a += " World"; // Hello World</code></pre>
+<<<<<<< HEAD
+      </div>
+      </article>
+      <article>
+        <h3>Escaping strings</h3>
+      <div class="content">
+=======
       </article>
       <article>
         <h4>Escaping strings</h4>
+>>>>>>> 5fa6364732488f1634c5c8bd4c43f754b34c5e4d
         <p>Strings values can be written using single or double quotes. You should always start and end with the same type of quote, if using quotation marks inside a string then you can use the alternate quote. For example:</p>
         <pre><code>var str = "I'm a string";</code></pre>
         <p>Quotation marks can also be used by escaped, this is done using a backslash.</p>
@@ -81,6 +125,29 @@
           <dt>Form feed</dt>
           <dd>\f</dd>
         </dl>
+<<<<<<< HEAD
+      </div></article>
+
+      <article>
+        <h3>Built in String properties</h3>
+        <div class="content">
+          <h4>string.length</h4>
+          <div class="content">
+            <pre><code>var name = "Hubert J. Farnsworth";<br>name.length; // 20</code></pre>
+            <h4>string[index]</h4>
+            <p>JavaScript uses zero-based indexing, so when counting, everyting starts at 0. To return a  character at a specific index, use bracket notation and the index number.</p>
+            <pre><code>var name = "Hubert J. Farnsworth";<br>name[5]; // t</code></pre>
+            <p>To find the second to last character of a string, you can use the length property and a subtraction operator inside the bracket notation.</p>
+            <pre><code>var name = "Hubert J. Farnsworth";<br>name[name.length - 2]; // t</code></pre>
+          </div>
+        </div>
+      </article>
+
+		<article>
+        <h2>Operators</h2>
+      <div class="content">
+        <h3>Arithmetic operators:</h3>
+=======
       </article>
 
       <article>
@@ -100,6 +167,7 @@
 		<article>
         <h3>Operators</h3>
         <h4>Arithmetic operators:</h4>
+>>>>>>> 5fa6364732488f1634c5c8bd4c43f754b34c5e4d
         <dl>
           <dt>Addition</dt>
           <dd>+</dd>
@@ -124,7 +192,11 @@
           <dt>Divide by variable</dt>
           <dd>/=</dd>
         </dl>
+<<<<<<< HEAD
+        <h3>Comparison operators:</h3>
+=======
         <h4>Comparison operators:</h4>
+>>>>>>> 5fa6364732488f1634c5c8bd4c43f754b34c5e4d
         <dl>
           <dt>Equal</dt>
           <dd>==</dd>
@@ -143,10 +215,18 @@
           <dt>Less than or equal</dt>
           <dd>&lt;=</dd>
         </dl>
+<<<<<<< HEAD
+      </div></article>
+
+			<article>
+        <h2>Arrays</h2>
+      <div class="content">
+=======
       </article>
 
 			<article>
         <h3>Arrays</h3>
+>>>>>>> 5fa6364732488f1634c5c8bd4c43f754b34c5e4d
         <p>Arrays are used to store several pieces of data in one place. Data can be of any type, string, number, object, etc.</p>
         <pre><code>var myArray = ["pizza", "chips", "burgers"];</code></pre>
         <p>You can even have an array of arrays, this is called a know as multi-dimensional array</p>
@@ -165,10 +245,18 @@
         <pre><code>array.shift(); // array is now 2,3,4,5 </code></pre>
         <p>To append an item to the start of an array use the unshift() function</p>
         <pre><code>array.unshift(1); // array is now 1,2,3,4,5 </code></pre>
+<<<<<<< HEAD
+      </div></article>
+
+			<article>
+        <h2>Functions</h2>
+      <div class="content">
+=======
       </article>
 
 			<article>
         <h3>Functions</h3>
+>>>>>>> 5fa6364732488f1634c5c8bd4c43f754b34c5e4d
         <p>An example of a function</p>
         <pre><code>function functionName() {<br>  console.log("Hello World");<br>}</code></pre>
         <p>An example of a function stored in a variable</p>
@@ -178,6 +266,50 @@
         <pre><code>function sum(a, b) {<br>  console.log(a + b);<br>}<br>sum(2, 4); // Outputs 6</code></pre>
         <p>A returned value for a function can be stored in a variable</p>
         <pre><code>var answer = sum(5, 5); // answer is 10</code></pre>
+<<<<<<< HEAD
+			</div></article>
+
+			<article>
+				<h2>Built in functions</h2>
+        <div class="content">
+          
+          <article>
+					  <h3>for loops</h3>
+					  <section>
+						  <h4>vanilla</h4>
+              <p>for loop:</p>
+              <pre><code>let myArray = [1,2,3,4];<br>for (let i=0; i < myArray.length; i++) {<br> console.log(myArray[i]);<br>}<br>// 1 2 3 4</code></pre>
+              <p>forEach loop:</p>
+              <pre><code>let myArray = [1,2,3,4];<br>myArray.forEach(function(value) {<br> console.log(value);<br>});<br>// 1 2 3 4</code></pre>
+              <p>for-in loop for looping over object properties:</p>
+              <pre><code>let myObject = {one:1,two:2,three:3,four:4};<br>for (let key in myObject) {<br> console.log(myObject[key]);<br>};<br>// 1 2 3 4</code></pre>
+              <p>for-of loop for looping over data. For example values in an array.</p>  
+              <pre><code>let myArray = [1,2,3,4];<br>for (let value of myArray) {<br> console.log(value);<br>};<br>// 1 2 3 4</code></pre>
+					  </section>
+					  <section>
+						  <h4>underscore</h4>
+              <p><code>_.each</code> takes two arguments, an array, object or array-like object and a function which takes three arguments: <code>value, index, list</code>. (index and list are optional)</p>
+              <pre><code>let myArray = [1,2,3,4];<br>_.each(myArray, function(value, index, list) {<br>  console.log(value, index, list)<br>});<br>// 1 0 [1, 2, 3, 4]<br>// 2 1 [1, 2, 3, 4]<br>// 3 2 [1, 2, 3, 4]<br>// 4 3 [1, 2, 3, 4]</code></pre>
+            </section>
+          </article>
+				  
+          <article>
+					  <h3>Map</h3>
+					  <section>
+						  <h4>vanilla</h4>
+					  </section>
+					  <section>
+						  <h4>underscore</h4>
+					  </section>
+				  </article>
+        
+        </div>
+      </article>
+
+			<article>
+        <h2>Arrow functions</h2>
+      <div class="content">
+=======
 			</article>
 
 			<article>
@@ -224,6 +356,7 @@
       <h2>Advance JavaScript</h2>
 			<article>
         <h3>Arrow functions</h3>
+>>>>>>> 5fa6364732488f1634c5c8bd4c43f754b34c5e4d
         <p>Arrow functions are anonymous and have a shorter syntax compared to function expressions. The value <em>this</em> does not get rebound.</p>
 				<p>Using functional expression:</p>
 				<pre class="js-style-old">
@@ -263,6 +396,18 @@ const sum = (a,b) => a + b;
 
 console.log(sum(6,2)); // 8
 				</pre>
+<<<<<<< HEAD
+    </div>
+    </article>
+  </main>
+  <footer><p>&copy; 2017 | Darren Thomas</p></footer>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+	<script>
+		$('h2').click(function() {
+			$(this).next().toggle();
+		});
+=======
       </article>
     </article>
   </main>
@@ -281,6 +426,7 @@ console.log(sum(6,2)); // 8
 	const sum = (a,b) => a + b;
 
 	console.log(sum(6,2)); // 8
+>>>>>>> 5fa6364732488f1634c5c8bd4c43f754b34c5e4d
 	</script>
 </body>
 </html>
