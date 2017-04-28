@@ -1,0 +1,15 @@
+Beginner JavaScript:
+if else
+else if
+switch
+&& || operators
+regular expressions
+
+
+Intermediate JavaScript:
+
+
+Advance JavaScript:
+
+Exercise:
+chaining-if-else-statements
