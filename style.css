@@ -2,49 +2,42 @@
 @-ms-viewport { width: device-width; }
 @-o-viewport  { width: device-width; }
 @viewport     { width: device-width; }
-
 html {
   box-sizing: border-box;
-  background-color: #999;
 }
 *, *:before, *:after {
   box-sizing: inherit;
 }
 body {
-  padding: 1em;
-  background-color: #fff;
+  padding: 0 1em;
+  color: #333;
+  font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
 }
-p { font-size: 1em;}
-h1 { font-size: 2em;}
-h2 { font-size: 1.6em;}
-h3 { font-size: 1.4em;}
-h4 { font-size: 1.2em;}
-h5 { font-size: 1em;}
-h6 { font-size: .75em;}
-h1 {
-  margin: 0;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
+p, li {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+a:focus, a:hover, a:active {
+	color: red;
 }
 pre {
-  padding: 1em;
-  background-color: #FFFBE5;
+  padding: 1em 3em;
+  background-color: #eee;
+  overflow: auto;
   white-space: pre-wrap;
-  border: 2px solid #ccc;
-  border-radius: 3px;
+	border: 4px solid #ccc;
+	border-left: 8px solid #009900;
+  border-radius: 4px;
 }
 code {
   font-family: monospace;
   background-color: #eee;
 }
-pre code {
-  background-color: transparent;
-}
-dl {
-  padding: 1em;
-  background-color: #FFFBE5;
-  border: 2px solid #ccc;
-  border-radius: 3px;
+.js-style-old {
+	border-left: 8px solid #990000;
 }
 @media all and (min-width: 45em) {
   body {
@@ -52,14 +45,11 @@ dl {
     margin: .5em auto;
   }
 }
-@media all and (min-width: 20em) {
-  dt {
-    float: left;
-  }
+[id="img_wp_permissions_error_message"] {
+  width: 100%;
 }
-@media all and (min-width: 20em) {
-  dd {
-    text-align: right;
-    margin-right: 4em;
+@media all and (min-width: 33em) {
+  [id="img_wp_permissions_error_message"] {
+    width: auto;
   }
 }

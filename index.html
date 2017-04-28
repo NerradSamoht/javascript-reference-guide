@@ -11,33 +11,9 @@
   <header>
     <h1>JavaScript Reference Guide</h1>
   </header>
-  <nav>
-    <h2>Menu</h2>
-    <ul>
-      <li><a href="#s01">Beginner JavaScript</a>
-        <ul>
-          <li><a href="#s01a01">Comments</a></li>
-          <li><a href="#s01a02">Variables</a></li>
-          <li><a href="#s01a03">Strings</a>
-            <ul>
-              <li><a href="#s01a03s01">Concatinating strings</a></li>
-              <li><a href="#s01a03s02">Escaping strings</a></li>
-              <li><a href="#s01a03s03">Built in String properties</a></li>
-            </ul>
-          </li>
-          <li><a href="#s01a04">Operators</a></li>
-          <li><a href="#s01a05">Arrays</a></li>
-          <li><a href="#s01a06">Functions</a></li>
-          <li><a href="#s01a07">Best practices</a></li>
-        </ul>
-      </li>
-      <li><a href="#s02">Intermediate JavaScript</a></li>
-      <li><a href="#s03">Advance JavaScript</a></li>
-    </ul>
-  </nav>
   <main>
-    <section id="s01">
-      <h2>Beginner JavaScript</h2>
+		<article>
+			<h3>Data types</h3>
       <p>JavaScript has seven data types:</p>
       <ol>
         <li><code>string</code></li>
@@ -48,71 +24,79 @@
         <li><code>undefined</code></li>
         <li><code>null</code></li>
       </ol>
-      <article id="s01a01">
-        <h3>Comments</h3>
-        <p>// This is an in-line comment</p>
-        <p>/*<br>This is a <br>multi-line comment<br>*/</p>
+		</article>
+
+		<article>
+			<h3>Variables</h3>
+			<div class="content">
+				<p>Declaring a variable <code>var myName;</code></p>
+				<p>If no value is assigned JavaScript assigns a value of <code>undefined</code>.</p>
+				<p>To assign a value use the <code>=</code> operator.</p>
+				<pre><code>var a;</code><br>a = 1;</pre>
+				<p>A variable can be assigned a value in the same line <code>var a = 1;</code>.</p>
+				<p>It is possible to create a variable without using <code>var</code>.</p>
+				<pre><code>myString = "A global variable."</code></pre>
+				<p>This however will create a global variable, which could lead to some unexpected results, so always best to use <code>var</code>.</p>
+			</div>
+		</article>
+
+    <article>
+      <h3>Comments</h3>
+      <p>// This is an in-line comment</p>
+      <p>/*<br>This is a <br>multi-line comment<br>*/</p>
+    </article>
+
+		<article>
+      <h3>Strings</h3>
+      <article>
+        <h4>Concatenating strings</h4>
+        <p>To concatenate a string you can use the <code>+</code> operator.</p>
+        <pre><code>var a = "Hello";<br>var b = "World";<br>var c = a + " " + b; // Hello World</code></pre>
+        <p>To concatentate a string to the end of an existing string you can use the <code>+=</code> operator.</p>
+        <pre><code>var a = "Hello"<br>a += " World"; // Hello World</code></pre>
       </article>
-      <article id="s01a02">
-        <h3>Variables</h3>
-        <p>Declaring a variable <code>var myName;</code></p>
-        <p>If no value is assigned JavaScript assigns a value of <code>undefined</code>.</p>
-        <p>To assign a value use the <code>=</code> operator.</p>
-        <pre><code>var a;</code><br>a = 1;</pre>
-        <p>A variable can be assigned a value in the same line <code>var a = 1;</code>.</p>
-        <p>It is possible to create a variable without using <code>var</code>.</p>
-        <pre><code>myString = "A global variable."</code></pre>
-        <p>This however will create a global variable, which could lead to some unexpected results, so always best to use <code>var</code>.</p>
+      <article>
+        <h4>Escaping strings</h4>
+        <p>Strings values can be written using single or double quotes. You should always start and end with the same type of quote, if using quotation marks inside a string then you can use the alternate quote. For example:</p>
+        <pre><code>var str = "I'm a string";</code></pre>
+        <p>Quotation marks can also be used by escaped, this is done using a backslash.</p>
+        <pre><code>var str = "I\"m a string";</code></pre>
+        <p>Other common charcters that require escape:</p>
+        <dl>
+          <dt>Single quote</dt>
+          <dd>\'</dd>
+          <dt>Double quote</dt>
+          <dd>\"</dd>
+          <dt>Backslash</dt>
+          <dd>\\</dd>
+          <dt>New line</dt>
+          <dd>\n</dd>
+          <dt>Carriage return</dt>
+          <dd>\r</dd>
+          <dt>Tab</dt>
+          <dd>\t</dd>
+          <dt>Backspace</dt>
+          <dd>\b</dd>
+          <dt>Form feed</dt>
+          <dd>\f</dd>
+        </dl>
       </article>
-      <article id="s01a03">
-        <h3>Strings</h3>
-        <section>
-          <h4 id="s01a03s01">Concatenating strings</h4>
-          <p>To concatenate a string you can use the <code>+</code> operator.</p>
-          <pre><code>var a = "Hello";<br>var b = "World";<br>var c = a + " " + b; // Hello World</code></pre>
-          <p>To concatentate a string to the end of an existing string you can use the <code>+=</code> operator.</p>
-          <pre><code>var a = "Hello"<br>a += " World"; // Hello World</code></pre>
-        </section>
-        <section>
-          <h4 id="s01a03s02">Escaping strings</h4>
-          <p>Strings values can be written using single or double quotes. You should always start and end with the same type of quote, if using quotation marks inside a string then you can use the alternate quote. For example:</p>
-          <pre><code>var str = "I'm a string";</code></pre>
-          <p>Quotation marks can also be used by escaped, this is done using a backslash.</p>
-          <pre><code>var str = "I\"m a string";</code></pre>
-          <p>Other common charcters that require escape:</p>
-          <dl>
-            <dt>Single quote</dt>
-            <dd>\'</dd>
-            <dt>Double quote</dt>
-            <dd>\"</dd>
-            <dt>Backslash</dt>
-            <dd>\\</dd>
-            <dt>New line</dt>
-            <dd>\n</dd>
-            <dt>Carriage return</dt>
-            <dd>\r</dd>
-            <dt>Tab</dt>
-            <dd>\t</dd>
-            <dt>Backspace</dt>
-            <dd>\b</dd>
-            <dt>Form feed</dt>
-            <dd>\f</dd>
-          </dl>
-        </section>
-        <section id="s01a03s03">
-          <h4>Built in String properties</h4>
-          <article>
-            <h5>string.length</h5>
-            <pre><code>var name = "Hubert J. Farnsworth";<br>name.length; // 20</code></pre>
-            <h5>string[index]</h5>
-            <p>JavaScript uses zero-based indexing, so when counting, everyting starts at 0. To return a  character at a specific index, use bracket notation and the index number.</p>
-            <pre><code>var name = "Hubert J. Farnsworth";<br>name[5]; // t</code></pre>
-            <p>To find the second to last character of a string, you can use the length property and a subtraction operator inside the bracket notation.</p>
-            <pre><code>var name = "Hubert J. Farnsworth";<br>name[name.length - 2]; // t</code></pre>
-          </article>
-        </section>
+
+      <article>
+        <h4>Built in String properties</h4>
+        <article>
+          <h5>string.length</h5>
+          <pre><code>var name = "Hubert J. Farnsworth";<br>name.length; // 20</code></pre>
+          <h5>string[index]</h5>
+          <p>JavaScript uses zero-based indexing, so when counting, everyting starts at 0. To return a  character at a specific index, use bracket notation and the index number.</p>
+          <pre><code>var name = "Hubert J. Farnsworth";<br>name[5]; // t</code></pre>
+          <p>To find the second to last character of a string, you can use the length property and a subtraction operator inside the bracket notation.</p>
+          <pre><code>var name = "Hubert J. Farnsworth";<br>name[name.length - 2]; // t</code></pre>
+        </article>
       </article>
-      <article id="s01a04">
+    </article>
+
+		<article>
         <h3>Operators</h3>
         <h4>Arithmetic operators:</h4>
         <dl>
@@ -159,7 +143,8 @@
           <dd>&lt;=</dd>
         </dl>
       </article>
-      <article id="s01a05">
+
+			<article>
         <h3>Arrays</h3>
         <p>Arrays are used to store several pieces of data in one place. Data can be of any type, string, number, object, etc.</p>
         <pre><code>var myArray = ["pizza", "chips", "burgers"];</code></pre>
@@ -180,7 +165,8 @@
         <p>To append an item to the start of an array use the unshift() function</p>
         <pre><code>array.unshift(1); // array is now 1,2,3,4,5 </code></pre>
       </article>
-      <article id="s01a06">
+
+			<article>
         <h3>Functions</h3>
         <p>An example of a function</p>
         <pre><code>function functionName() {<br>  console.log("Hello World");<br>}</code></pre>
@@ -191,34 +177,109 @@
         <pre><code>function sum(a, b) {<br>  console.log(a + b);<br>}<br>sum(2, 4); // Outputs 6</code></pre>
         <p>A returned value for a function can be stored in a variable</p>
         <pre><code>var answer = sum(5, 5); // answer is 10</code></pre>
-        <section id="s01a06s01">
-          <h4>Built in functions</h4>
-        </section>
+			</article>
+
+			<article>
+				<h3>Built in functions</h3>
+				<article>
+					<h4>Map</h4>
+					<div>
+						<h5>vanilla</h5>
+					</div>
+					<div>
+						<h5>underscore</h5>
+					</div>
+					<div>
+						<h5>jQuery</h5>
+					</div>
+				</article>
       </article>
-      <article id="s01a07">
+
+      <article>
         <h3>Best Practices</h3>
         <ol>
           <li>Write variable names in camelCase.</li>
         </ol>
       </article>
-      <article id="s01a08">
+
+			<article>
         <h3>Boolean</h3>
         <p>Booleans can only be one of two values: true or false. They are written without strings</p>
         <pre><code>var aBoolean = true</code></pre>
       </article>
-      <article id="s01a09">
+
+			<article>
         <h3>If statements</h3>
         <p>An example of an if statement</p>
         <pre><code>var aBoolean = true;<br>if (aBoolean) {<br>  return "It's true!";<br>}</code></pre>
       </article>
-    </section>
-    <section id="s02">
+    </article>
+
+		<article>
       <h2>Intermediate JavaScript</h2>
-    </section>
-    <section id="s03">
+    </article>
+
+		<article>
       <h2>Advance JavaScript</h2>
-    </section>
+			<article>
+        <h3>Arrow functions</h3>
+        <p>Arrow functions are anonymous and have a shorter syntax compared to function expressions. The value <em>this</em> does not get rebound.</p>
+				<p>Using functional expression:</p>
+				<pre class="js-style-old">
+const i = [0,1,2,3,4,5,6,7,8,9];
+
+const output = i.map(function(i) {
+	return `${i}`;
+});
+
+console.log(output);
+
+// ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+				</pre>
+				<p>Arrow function with one parameter:</p>
+				<pre>
+const i = [0,1,2,3,4,5,6,7,8,9];
+
+const output = i.map(i => {
+	return `${i}`;
+});
+
+console.log(output);
+
+// ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+				</pre>
+				<p>Arrow function with two parameters:</p>
+				<pre>
+const sum = (a,b) => {
+	return a + b;
+};
+
+console.log(sum(5,1)); // 6
+				</pre>
+				<p>Arrow function with two parameters on one line:</p>
+				<pre>
+const sum = (a,b) => a + b;
+
+console.log(sum(6,2)); // 8
+				</pre>
+      </article>
+    </article>
   </main>
   <footer><p>&copy; 2016 | Darren Thomas</p></footer>
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+  crossorigin="anonymous"></script>
+	<script>
+		$('.content').hide();
+		$('article').click(function() {
+			$('.content').toggle();
+		});
+
+
+	const sum = (a,b) => a + b;
+
+	console.log(sum(6,2)); // 8
+	</script>
 </body>
 </html>
